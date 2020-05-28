@@ -1,0 +1,172 @@
+  <html>
+	<head>
+		<meta charset="utf-8">
+		<title> Estrutura de Dados - DIÁRIO DE BORDO </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<div class="logo">
+			</div>
+
+			<div class="menu1">
+				<br><br><a href="main.html"> Início </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="contato.html"> Contato </a>
+			</div>
+
+			<div class="titulo">
+				<h1>
+					<center>
+						COMANDO DE FLUXO - DIÁRIO DE BORDO
+					</center>
+				</h1>
+			</div>
+		</header>
+		<nav class="menu">
+			<ul>
+				<li><a href="instalacao-server-web.html">Instalação Servidor Web</a></li>
+				<li><a href="opcoes-server-web.html">Opções do Servidor Web</a></li>
+				<li><a href="manipulacao-fluxo.html"> Manipulação de Fluxo </a></li>
+				<li><a href="#">Operadores</a>
+					<ul>
+						<li><a href="aritmeticos.html"> Operadores Aritméticos </a></li>
+						<li><a href="logicos.html"> Operadores Lógicos </a></li>
+						<li><a href="comparacao.html"> Operadores de Comparação </a></li>
+						<li><a href="outros-operadores.html"> Demais operadores </a></li>
+					</ul>
+				</li>
+				<li><a href="#"> Comando de Fluxo </a>
+					<ul>
+						<li><b> Estruturas de Dados: </b></li>
+							<li><a href="if.html"> if </a></li>
+							<li><a href="if-else.html"> if-else </a></li>
+							<li><a href="switch.html"> switch </a></li>
+						<li><b> Estruturas de Repetição: </b></li>
+							<li><a href="for.html"> for </a></li>
+							<li><a href="while.html"> while </a></li>
+							<li><a href="do-while.html"> do/while </a></li>
+					</ul>
+				</li>
+				<li><a href="vetor-matriz.html"> Vetores e Matrizes </a></li>
+				<li><a href="criacao-banco-dados.html"> Criação Banco de Dados </a></li>
+				<li><a href="#"> Trabalhando com o BD </a>
+					<ul>
+            <li><a href="conexao-bd.html"> Conexão com o Banco de Dados </a></li>
+						<li><a href="insert-dados-bd.html"> Inserindo dados no BD pelo formulário </a></li>
+						<li><a href="pesquisa-geral.html"> Pesquisa geral no BD</a></li>
+						<li><a href="pesquisa-nome.html"> Pesquisa por nome no BD</a></li>
+						<li><a href="deletar.html"> Deletar dados do BD </a></li>
+						<li><a href="alterar.html"> Alterar dados do BD</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+		<main class="conteudos">
+			<article class="conteudo">
+				<img src="img/switch.jpg"/></a>
+				<div class="inner">
+					<h2> Teoria </h4>
+					<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;funciona semelhante a vários if juntos. Uma expressão ou variável é analisada e, de acordo com o valor, um entre vários blocos de comandos é executado.
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;Diferentemente do if, cuja expressão somente retorna verdadeiro ou falso, no switch o valor retornado pode ser diverso. A expressão é comparada com cada uma das cláusulas case até que uma coincida. Quando isso acontece, o bloco de comandos correspondente é executado até encontrar o comando break, que interrompe a execução daquele bloco e finaliza o switch. Se nenhuma cláusula coincidir, então o bloco delimitado pelo comando default é executado<br> <br>
+					</p>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/switch.jpg"/>
+				<div class="inner">
+					<h2> Estrutura: </h4>
+					&lt;?php<br><br>
+						&nbsp;&nbsp;switch($variavel)<br>
+						&nbsp;&nbsp;{<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;case "condicao1":<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bloco de comandos<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;case "condicao2":<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bloco de comandos<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+						&nbsp;&nbsp;&nbsp;&nbsp;default:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;bloco de comandos<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+						&nbsp;&nbsp;}<br><br>
+					?&gt;<br>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/switch.jpg"/>
+				<div class="inner">
+					<h2>  Exemplo:   </h2>
+					<p align="justify">
+						Faça um algoritmo que seja atribuído duas notas obtidas por um aluno na disciplina de Cálculo, o número de aulas ministradas e o número de aulas assistidas por este aluno nesta disciplina. Calcule e mostre a média final deste aluno e diga se ele foi aprovado ou reprovado. Considere que para um aluno ser aprovado ele deve obter média final igual ou maior a 6 e ter no mínimo 75% de freqüência.
+					<br><br>
+					<form name = "switch" action="switch.php" method="post">
+					<center>
+
+
+						<tr><td><label> Digite uma nota:<br> </label> <input type = "text" name = "n1" placeholder=" ex:10" required/><p/></tr></td>
+						<tr><td><label> Digite outra nota:<br> </label> <input type = "text" name = "n2" placeholder="ex: 8" required/><p/></tr></td>
+						<tr><td><label> Digite o numero de aulas ministradas:<br> </label> <input type = "text" name = "aulasm" placeholder="ex: 90" required/><p/></tr></td>
+						<tr><td><label> Digite o numero de aulas assistidas:<br> </label> <input type = "text" name = "aulasa" placeholder="ex: 87" required/><p/></tr></td><br>
+						<tr><td><input type = "submit" name="btncalcular" value="Calcular"></center></td></tr>
+
+
+
+					</center>
+					</form>
+					<br>
+					<b>Código php utilizado: <br><br></b>
+					&lt;?php<br><br>
+
+						&nbsp;&nbsp;$nota1 = $_POST['n1'];<br>
+						&nbsp;&nbsp;$nota2 = $_POST['n2'];<br>
+						&nbsp;&nbsp;$aulas_total = $_POST['aulasm'];<br>
+						&nbsp;&nbsp;$aulas_assis = $_POST['aulasa'];<br>
+						&nbsp;&nbsp;$media = ($nota1+$nota2)/2;<br>
+						&nbsp;&nbsp;$frequencia = ($aulas_assis*100)/$aulas_total;<br>
+
+						&nbsp;&nbsp;switch ($media)<br>
+						&nbsp;&nbsp;{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;case $media < 6:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($frequencia < 75)<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Aluno reprovado";<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Aluno reprovado";<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+							&nbsp;&nbsp;&nbsp;&nbsp;case $media > 6:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($frequencia < 75)<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Aluno reprovado";<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Aluno aprovado";<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br><br>
+
+							&nbsp;&nbsp;&nbsp;&nbsp;default:<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "error";<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+						&nbsp;&nbsp;}
+					?&gt;
+
+
+				</div>
+			</article>
+
+
+		</main>
+	</body>
+</html>

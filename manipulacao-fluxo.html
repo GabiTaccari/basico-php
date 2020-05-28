@@ -1,0 +1,223 @@
+  <html>
+	<head>
+		<meta charset="utf-8">
+		<title> Manipulação de fluxo - DIÁRIO DE BORDO </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<div class="logo">
+			</div>
+
+			<div class="menu1">
+				<br><br><a href="main.html"> Início </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="contato.html"> Contato </a>
+			</div>
+
+			<div class="titulo">
+				<h1>
+					<center>
+						MANIPULAÇÃO DE FLUXO - DIÁRIO DE BORDO
+					</center>
+				</h1>
+			</div>
+		</header>
+		<nav class="menu">
+			<ul>
+				<li><a href="instalacao-server-web.html">Instalação Servidor Web</a></li>
+				<li><a href="opcoes-server-web.html">Opções do Servidor Web</a></li>
+				<li><a href="manipulacao-fluxo.html"> Manipulação de Fluxo </a></li>
+				<li><a href="#">Operadores</a>
+					<ul>
+						<li><a href="aritmeticos.html"> Operadores Aritméticos </a></li>
+						<li><a href="logicos.html"> Operadores Lógicos </a></li>
+						<li><a href="comparacao.html"> Operadores de Comparação </a></li>
+						<li><a href="outros-operadores.html"> Demais operadores </a></li>
+					</ul>
+				</li>
+				<li><a href="#"> Comando de Fluxo </a>
+					<ul>
+						<li><b> Estruturas de Dados: </b></li>
+							<li><a href="if.html"> if </a></li>
+							<li><a href="if-else.html"> if-else </a></li>
+							<li><a href="switch.html"> switch </a></li>
+						<li><b> Estruturas de Repetição: </b></li>
+							<li><a href="for.html"> for </a></li>
+							<li><a href="while.html"> while </a></li>
+							<li><a href="do-while.html"> do/while </a></li>
+					</ul>
+				</li>
+				<li><a href="vetor-matriz.html"> Vetores e Matrizes </a></li>
+				<li><a href="criacao-banco-dados.html"> Criação Banco de Dados </a></li>
+				<li><a href="#"> Trabalhando com o BD </a>
+					<ul>
+            <li><a href="conexao-bd.html"> Conexão com o Banco de Dados </a></li>
+						<li><a href="insert-dados-bd.html"> Inserindo dados no BD pelo formulário </a></li>
+						<li><a href="pesquisa-geral.html"> Pesquisa geral no BD</a></li>
+						<li><a href="pesquisa-nome.html"> Pesquisa por nome no BD</a></li>
+						<li><a href="deletar.html"> Deletar dados do BD </a></li>
+						<li><a href="alterar.html"> Alterar dados do BD</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+		<main class="conteudos">
+			<article class="conteudo">
+				<img src="img/delimitador-codigo.jpg"/></a>
+				<div class="inner">
+					<h4>Demilitadores de Código: </h4>
+					<b>Primeira forma:</b>
+						<p>&lt;?php
+							<br>&nbsp;&nbsp;&nbsp;&nbsp; comandos <br>?&gt;
+						</p>
+					<br>
+					<b>Segunda forma:</b>
+						<p>&lt;?
+							<br>&nbsp;&nbsp;&nbsp;&nbsp; comandos <br>?&gt;
+						</p>
+					<br>
+
+					<b>Terceira forma:</b>
+						<p>&lt;script language="php"&gt;
+							<br>&nbsp;&nbsp;&nbsp;&nbsp; comandos <br>&lt;/script&gt;
+						</p>
+					<br>
+
+					<b>Quarta forma:</b>
+						<p>&lt;%
+							<br>&nbsp;&nbsp;&nbsp;&nbsp; comandos <br>%&gt;
+						</p>
+					<br>
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/learn-php.jpg" alt ="Servidor Web"/>
+				<div class="inner">
+					<h4>Exemplo de Sintaxe Básica:</h4><br>
+
+					&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+						&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&lt;title&gt; Página em PHP &lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+						&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+						&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&lt;?php<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Códigos<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							?&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+						&lt;/body&gt;<br>
+					&lt;/html&gt;
+
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/helloworld.png"/>
+				<div class="inner">
+					<h2>Comando echo: </h2>
+					<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;É a instrução que envia para a página de saída, em HTML, as informações processadas em PHP, podendo ser texto, números ou variáveis. Essas informações, na maioria das vezes, são mescladas com os comandos HTML.</p><br>
+					<p align="justify">Dentro do comando echo, as aspas utilizadas para os comando são simples, e não duplas.</p><br>
+					<p align="justify">Sintaxe: </p><br>
+
+							&lt;?php<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								echo "O meu texto tem 'aspas' ";<br>
+							?&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/conc.jpg"/>
+				<div class="inner">
+					<h2>Concatenando:</h2>
+					<p align="justify">A concatenação é realizada com um ponto (<b> . </b>), com a seguinte sintaxe: </p><br>
+
+					&lt;?php<br>
+						// Cria as variáveis com o valores necessários<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;$meunome = 'Luiz Santos';<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;$minhaidade = 27;<br>
+						// Exibe uma frase com as variáveis concatenadas<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;echo 'Olá, meu nome é ' . $meunome . ' e minha idade é ' .
+						$minhaidade;<br>
+					?&gt;
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="" alt =""/>
+				<div class="inner">
+					<h4></h4><br>
+				</div>
+			</article>
+			<article class="conteudo">
+				<img src="" alt =""/>
+				<div class="inner">
+					<h4></h4><br>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/log-php.jpg"/>
+				<div class="inner">
+					<h4>Tipos de variáveis:</h4><br>
+
+					<p align="justify">As variáveis em PHP não precisam ser declaradas. Quando atribuímos algum valor para elas, o tipo é automaticamente reconhecido.</p>
+					<br>
+					<table border="2px" bordercolor = "#000FF0">
+					<tr>
+						<th bgcolor="#A4D3EE">Tipo</th>
+						<th bgcolor="#A4D3EE">Descrição</th>
+					</tr>
+					<tr>
+						<td>Inteiro </td>
+						<td> Número inteiro (...18, 1, 0, -1, -54...)
+					</tr>
+					<tr>
+						<td>Ponto Flutuantes</td>
+						<td>Números reais (...3.14, -5.48...)</td>
+					</tr>
+					<tr>
+						<td>String</td>
+						<td>Cadeia de caracteres ("João da Silva")</td>
+					</tr>
+					<tr>
+						<td>Array</td>
+						<td>Coleções</td>
+					</tr>
+					<tr>
+						<td>Objeto</td>
+						<td>Instancia de Classes</td>
+					</tr>
+					<tr>
+						<td>Booleano</td>
+						<td>TRUE ou FALSE</td>
+					</tr>
+					<tr>
+						<td>Null</td>
+						<td>Sem valor atribuido</td>
+					</tr>
+					</table>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/var1.jpg"/>
+				<div class="inner">
+					<h4>Variáveis</h4><br>
+					<p align = "justify">Representam um espaço na memória onde um valor está armazenado <br><br>
+						No PHP começam pelo símbolo cifrão ( $ )<br><br>
+						São case sensitive (diferem maisculas de minusculas <br><br>
+						Podem ter letras, underline e numeros <br><br>
+						Não podem ter espaços e comecar por número <br><br>
+						Não precisa declarar o tipo antes, basta utilizá-las <br><br>
+					</p>
+
+				</div>
+			</article>
+		</main>
+	</body>
+</html>

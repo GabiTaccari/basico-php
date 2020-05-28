@@ -1,0 +1,209 @@
+  <html>
+	<head>
+		<meta charset="utf-8">
+		<title> Vetores e Matrizes - DIÁRIO DE BORDO </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<div class="logo">
+			</div>
+
+			<div class="menu1">
+				<br><br><a href="main.html"> Início </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="contato.html"> Contato </a>
+			</div>
+
+			<div class="titulo">
+				<h1>
+					<center>
+						VETORES E MATRIZES - DIÁRIO DE BORDO
+					</center>
+				</h1>
+			</div>
+		</header>
+		<nav class="menu">
+			<ul>
+				<li><a href="instalacao-server-web.html">Instalação Servidor Web</a></li>
+				<li><a href="opcoes-server-web.html">Opções do Servidor Web</a></li>
+				<li><a href="manipulacao-fluxo.html"> Manipulação de Fluxo </a></li>
+				<li><a href="#">Operadores</a>
+					<ul>
+						<li><a href="aritmeticos.html"> Operadores Aritméticos </a></li>
+						<li><a href="logicos.html"> Operadores Lógicos </a></li>
+						<li><a href="comparacao.html"> Operadores de Comparação </a></li>
+						<li><a href="outros-operadores.html"> Demais operadores </a></li>
+					</ul>
+				</li>
+				<li><a href="#"> Comando de Fluxo </a>
+					<ul>
+						<li><b> Estruturas de Dados: </b></li>
+							<li><a href="if.html"> if </a></li>
+							<li><a href="if-else.html"> if-else </a></li>
+							<li><a href="switch.html"> switch </a></li>
+						<li><b> Estruturas de Repetição: </b></li>
+							<li><a href="for.html"> for </a></li>
+							<li><a href="while.html"> while </a></li>
+							<li><a href="do-while.html"> do/while </a></li>
+					</ul>
+				</li>
+				<li><a href="vetor-matriz.html"> Vetores e Matrizes </a></li>
+				<li><a href="criacao-banco-dados.html"> Criação Banco de Dados </a></li>
+				<li><a href="#"> Trabalhando com o BD </a>
+					<ul>
+            <li><a href="conexao-bd.html"> Conexão com o Banco de Dados </a></li>
+            <li><a href="insert-dados-bd.html"> Inserindo dados no BD pelo formulário </a></li>
+            <li><a href="pesquisa-geral.html"> Pesquisa geral no BD</a></li>
+            <li><a href="pesquisa-nome.html"> Pesquisa por nome no BD</a></li>
+			<li><a href="deletar.html"> Deletar dados do BD </a></li>
+						<li><a href="alterar.html"> Alterar dados do BD</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+		<main class="conteudos">
+			<article class="conteudo">
+				<img src="img/array.jpg"/></a>
+				<div class="inner">
+					<h2> Definição Array : </h4>
+					<p align="justify"> &nbsp;&nbsp;Um array no PHP é na verdade um mapa ordenado. Um mapa é um tipo que relaciona valores a chaves. Este tipo é otimizado para várias usos diferentes: ele pode ser tratado como um array, uma lista (vetor), hashtable (que é uma implementação de mapa), dicionário, coleção, pilha, fila e provavelmente mais. Assim como existe a possibilidade dos valores do array serem outros arrays, árvores e arrays multidimensionais. <br><br></p>
+
+
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2>Sintaxe do Array: </h4>
+					<p align="left">
+						<b> Exemplo 1: </b><br>
+						&lt;?php<br>
+						&nbsp;&nbsp;$lista = array('conteudo1', 'conteudo2', 'conteudo3');<br>
+						?&gt;<br></p>
+						<p align="justify">&nbsp;&nbsp; Neste primeiro exemplo da sintaxe, é definido todos os três elementos na forma mais simples possível, separados apenas por vírgula por vírgula.
+						<br><br></p>
+
+
+
+ <br><br></p>
+
+
+				</div>
+			</article>
+
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2>Sintaxe do Array: </h2>
+					<b> Exemplo 2: </b><br>
+					&lt;?php<br>
+						&nbsp;&nbsp;$lista = array();<br>
+						&nbsp;&nbsp;$lista[0] = 'conteudo1';<br>
+						&nbsp;&nbsp;$lista[1] = 'conteudo2';<br>
+						&nbsp;&nbsp;$lista[2] = 'conteudo3';<br>
+						?&gt;<br></p>
+						<p align="justify">&nbsp;&nbsp;Já no segundo exemplo definiu-se (antes) que $lista será um array, e logo após, definiu-se seus três elementos, ptendo um número entre colchetes agora: $lista[1], que significa o índice do array, a posição do elemento. O índice do elemento pode ser definido como numérico ou textual (string)<br><br></p>
+				</div>
+			</article>
+
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2>Sintaxe do Array: </h2>
+					<b> Exemplo 3: </b><br>
+						&lt;?php<br>
+						$lista = array();<br>
+						$lista[] = 'conteudo1';<br>
+						$lista[] = 'conteudo2';<br>
+						$lista[] = 'conteudo3';<br>
+						?&gt;<br><br>
+						<p align="justify">
+							&nbsp;&nbsp;No terceiro exemplo, faz-se a mesma coisa que do segundo, só que omite-se os índices dos elementos, sendo assim, o PHP irá colocar cada elemento no fim do array, começando com a posição 0 (primeiro elemento) e crescendo a cada elemento.
+
+						</p>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<div class="inner">
+
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2> Índices Textuais (Strings) - Sintaxe Array : </h2>
+					<p align="justify">
+
+						Também é possível definir índices (também chamados de keys ou chaves) como strings, segue um exemplo de uso:</p>
+
+						&lt;?php<br>
+							&nbsp;&nbsp;// Definição longa<br>
+							&nbsp;&nbsp;$conjunto = array();<br>
+							&nbsp;&nbsp;$conjunto['chave0'] = 'elemento1';<br>
+							&nbsp;&nbsp;$conjunto['chave1'] = 'elemento2';<br>
+							&nbsp;&nbsp;$conjunto['chave2'] = 'elemento3';<br><br>
+
+							&nbsp;&nbsp;// Definição simples<br>
+							&nbsp;&nbsp;$conjunto = array('chave0' => 'elemento1', 'chave1' => 'elemento2', 'chave2' => 'elemento3');<br>
+						?&gt;
+
+					<br><br>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2> Exibindo e localizando elementos dos arrays</h2>
+					<p align="justify"> De maneira simplificada, para exibir um elemento basta seguir a mesma sintaxe da declaração longa: <br><br></p>
+
+					&lt;?php<br><br>
+						&nbsp;&nbsp;//Declaração longa:<br>
+						&nbsp;&nbsp;$conjunto = array();<br>
+						&nbsp;&nbsp;$conjunto['chave0'] = 'elemento1';<br>
+						&nbsp;&nbsp;$conjunto['chave1'] = 'elemento2';<br>
+						&nbsp;&nbsp;$conjunto['chave2'] = 'elemento3';<br>
+
+						&nbsp;&nbsp;echo "O elemento do segundo vetor é: " . $conjunto['chave1'];<br><br>
+
+						&nbsp;&nbsp;// Lista<br>
+						&nbsp;&nbsp;$lista = array('conteudo1', 'conteudo2', 'conteudo3');<br>
+
+						&nbsp;&nbsp;echo "O segundo item da lista é: " . $lista[2];<br>
+					?&gt;
+				</div>
+			</article>
+
+
+
+
+			<article class="conteudo">
+				<img src="img/array.jpg"/>
+				<div class="inner">
+					<h2> Arrays multi-dimensionais (matriz)</h2>
+					<p align="justify"> De maneira simplificada, pode-se definir um array multi-dimensional onde um ou mais elementos sejam arrays. Nesse caso o array não pode mais ser chamado de lista, e deve ser chamado de vetor ou array mesmo. Veja um exemplo básico de definição e exibição: <br><br></p>
+
+					&lt;?php<br><br>
+							&nbsp;&nbsp;// Carro<br>
+							&nbsp;&nbsp;$carro = array();<br>
+							&nbsp;&nbsp;$carro['cores'] = array('Vermelho', 'Branco', 'Cinza');<br>
+							&nbsp;&nbsp;$carro['modelo'] = 'CrossFox';<br>
+							&nbsp;&nbsp;$carro['fabricante'] = 'Volkswagen';<br>
+							&nbsp;&nbsp;echo "A terceira cor do meu " . $carro['modelo'] . " é: " . $carro['cores'][2];<br>
+							&nbsp;&nbsp;// Resultado: A terceira cor do meu CrossFox é: Cinza<br>
+					?&gt;
+				</div>
+			</article>
+
+
+		</main>
+	</body>
+</html>

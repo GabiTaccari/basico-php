@@ -1,0 +1,163 @@
+  <html>
+	<head>
+		<meta charset="utf-8">
+		<title> Conexão com o BD - DIÁRIO DE BORDO </title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<div class="logo">
+			</div>
+
+			<div class="menu1">
+				<br><br><a href="main.html"> Início </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="contato.html"> Contato </a>
+			</div>
+
+			<div class="titulo">
+				<h1>
+					<center>
+						CONEXÃO COM O BANCO DE DADOS - DIÁRIO DE BORDO
+					</center>
+				</h1>
+			</div>
+		</header>
+		<nav class="menu">
+			<ul>
+				<li><a href="instalacao-server-web.html">Instalação Servidor Web</a></li>
+				<li><a href="opcoes-server-web.html">Opções do Servidor Web</a></li>
+				<li><a href="manipulacao-fluxo.html"> Manipulação de Fluxo </a></li>
+				<li><a href="#">Operadores</a>
+					<ul>
+						<li><a href="aritmeticos.html"> Operadores Aritméticos </a></li>
+						<li><a href="logicos.html"> Operadores Lógicos </a></li>
+						<li><a href="comparacao.html"> Operadores de Comparação </a></li>
+						<li><a href="outros-operadores.html"> Demais operadores </a></li>
+					</ul>
+				</li>
+				<li><a href="#"> Comando de Fluxo </a>
+					<ul>
+						<li><b> Estruturas de Dados: </b></li>
+							<li><a href="if.html"> if </a></li>
+							<li><a href="if-else.html"> if-else </a></li>
+							<li><a href="switch.html"> switch </a></li>
+						<li><b> Estruturas de Repetição: </b></li>
+							<li><a href="for.html"> for </a></li>
+							<li><a href="while.html"> while </a></li>
+							<li><a href="do-while.html"> do/while </a></li>
+					</ul>
+				</li>
+				<li><a href="vetor-matriz.html"> Vetores e Matrizes </a></li>
+				<li><a href="criacao-banco-dados.html"> Criação Banco de Dados </a></li>
+				<li><a href="#"> Trabalhando com o BD </a>
+					<ul>
+						<li><a href="conexao-bd.html"> Conexão com o Banco de Dados </a></li>
+						<li><a href="insert-dados-bd.html"> Inserindo dados no BD pelo formulário </a></li>
+						<li><a href="pesquisa-geral.html"> Pesquisa geral no BD</a></li>
+						<li><a href="pesquisa-nome.html"> Pesquisa por nome no BD</a></li>
+						<li><a href="deletar.html"> Deletar dados do BD </a></li>
+						<li><a href="alterar.html"> Alterar dados do BD</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+
+		<main class="conteudos">
+
+			<article class="conteudo">
+				<img src="img/insert1.jpg"/></a>
+				<div class="inner">
+					<h2>Passo 1: </h4>
+					<p align="justify">Para realizar a inserção do dados no banco de dado através do formulário é utilizado o method e o action do formulário, ficando da seguinte forma em um exemplo básico de inclusão de um email e uma senha no BD:</p><br><br>
+
+					// no action é o nome do arquivo php que fara a inserção e o method será o modo como será enviada as informações do formulário, ou seja, post: <br>
+					&nbsp;&nbsp;&lt;form name = "cadastro" <font color="#FF000">action="incluircadastro.php" method="post"&gt;<br><br></font>
+
+
+						&nbsp;&nbsp;&lt;label&gt; Nome: &lt;/label&gt; &lt;input type = "text" name = "nome" required/&gt;  <br>
+						&nbsp;&nbsp;&lt;label&gt; Email: &lt;/label&gt;&lt;input type="text" name="email" required/>&gt;<br>
+
+						&nbsp;&nbsp;&lt;input type = "submit" name="btncadastrar" value="Enviar"&gt;<br>
+		&lt;/form&gt;
+
+	</body>
+</html>
+
+
+
+
+
+					 <br><br></p>
+				</div>
+			</article>
+
+			<article class="conteudo">
+				<img src="img/insert1.jpg"/></a>
+				<div class="inner">
+					<h2>Passo 2: </h4>
+						<p align ="justify">
+
+							A seguinte ação a seguir é criar o arquivo de extensão .php com o mesmo nome que foi definido no method do formulário, arquivo o qual é responsável por realizar a inserção da informação no BD. Seguindo o exemplo do cadastro de um email e uma senha no banco, temos o seguinte código do arquivo incluircadastro.php :
+
+						</p>
+						&lt;?php<br><br>
+						//Realiza a chamada do arquivo que irá realizar a conexão com o banco <br>
+						include_once('conexao.php');<br><br>
+							//recuperando dados que vem da página via post<br>
+							&nbsp;&nbsp;$nome = $_POST['nome'];<br>
+							&nbsp;&nbsp;$email = $_POST['email'];<br><br>
+
+							//criado a linha de INSERT<br><br>
+							//Sintaxe: $sqlinset = "insert into nome_tabela(campos_tabela) values ('$variaveis do php')";<br><Br>
+							&nbsp;&nbsp;$sqlinsert = "insert into alunos (matricula_alunos, nome_alunos, endereco_alunos, cidade_alunos, codigo_curso_alunos) values ('$matricula', '$nome', '$endereco', '$cidade', '$codigo_curso')";<br><br>
+
+							//executando instrução SQL<br>
+							&nbsp;&nbsp;$resultado = @mysqli_query($conexao, $sqlinsert);<br><br>
+
+							&nbsp;&nbsp;if (!$resultado)<br>
+							&nbsp;&nbsp;{<br>
+								&nbsp;&nbsp;&nbsp;&nbsp;die ('Query Inválido:' . @mysqli_error($conexao));<br>
+							&nbsp;&nbsp;}<br><br>
+
+							&nbsp;&nbsp;else<br>
+							&nbsp;&nbsp;{<br>
+								&nbsp;&nbsp;echo "Registro Cadastrado com Sucesso";<br>
+							&nbsp;&nbsp;}<br><br>
+
+							&nbsp;&nbsp;mysqli_close($conexao);<br>
+						?&gt;
+ <br><br>
+				</div>
+			</article>
+
+
+
+
+			<article class="conteudo">
+				<img src="img/insert1.jpg"/></a>
+				<div class="inner">
+					<h2>Exemplo Cadastro: </h4>
+
+						<table border = '1px' align="center">
+							<center><br><br>
+						<form name = "cadastro" action="incluircadastro.php" method="post">
+
+						<label> Nome: </label><br> <input type = "text" name = "nome" required/><br><br>
+						<label> Email: </label><br><input type="text" name="email" required/><Br><br>
+						<input type = "submit" name="btncadastrar" value="Enviar"></center></tr></td>
+		</form>
+	</table>
+
+
+ <br><br>
+				</div>
+			</article>
+
+
+
+
+
+		</main>
+	</body>
+</html>
